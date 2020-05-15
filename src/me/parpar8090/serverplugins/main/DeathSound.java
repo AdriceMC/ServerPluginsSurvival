@@ -47,19 +47,19 @@ public class DeathSound implements Listener {
 																	10, 1F);
 														}
 
-													}, 350L);
+													}, Math.round(350 / 1000L) * 20);
 
 										}
 
-									}, 250L);
+									}, Math.round(250 / 1000L) * 20);
 
 						}
 
-					}, 250L);
+					}, Math.round(250 / 1000L) * 20);
 
 				}
 
-			}, 250L);
+			}, Math.round(250 / 1000L) * 20);
 
 		}
 
