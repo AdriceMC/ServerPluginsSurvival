@@ -1,0 +1,53 @@
+main: me.parpar8090.serverplugins.main.ServerPlugins
+name: ServerPlugins.
+version: 1.0
+api-version: 1.14
+author: parpar8090
+description: SurvivalPerks is a plugin that adds perks to your survival.
+depend: [Vault]
+commands:
+    apply:
+        description: Main Command.
+        usage: /<command>
+        permission: serverpl.cmd.apply
+        permission-message: You don't have permissions
+    tutorial:
+        description: Main Command.
+        usage: /<command>
+        permission: serverpl.cmd.tutorial
+        permission-message: You don't have permissions
+    crystal:
+        description: Main Command.
+        usage: /<command>
+        permission: serverpl.cmd.crystal
+        permission-message: You don't have permissions
+    viewstats:
+        description: Main Command.
+        usage: /<command>
+        permission: serverpl.cmd.viewstats
+        permission-message: You don't have permissions
+    #friend:
+    #    description: Main Command.
+    #    usage: /<command>
+    #    permission: serverpl.cmd.friend
+    #    permission-message: You don't have permissions
+    leap:
+        description: Main Command.
+        usage: /<command>
+        permission: serverpl.cmd.leap
+        permission-message: You don't have permissions
+
+permissions:
+    serverpl.default:
+        description: Gives access to commands by default.
+        children:
+            serverpl.cmd.tutorial: true
+            serverpl.cmd.apply: true
+            serverpl.cmd.crystal: true
+            serverpl.cmd.viewstats: true
+            #serverpl.cmd.friend: true
+        default: true
+    serverpl.ops:
+        children:
+            serverpl.cmd.leap: true
+        default: op
